@@ -52,7 +52,7 @@ main #poster #frame #content{
 }
 
 main #poster #frame #content header{
-	padding-top: 20px; 
+	padding-top: 20px;
 }
 
 main #poster #frame #content header #logo{
@@ -84,7 +84,7 @@ main #poster #frame #tint #haveYouThought{
 
 main #poster #frame #WebGL{
     position: absolute;
-    top: 20px;
+    top: 0px;
 }
 
 main #poster #frame #content footer{
