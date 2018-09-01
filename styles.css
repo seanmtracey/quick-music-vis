@@ -46,7 +46,7 @@ main #poster #frame{
 }
 main #poster #frame #content{
 	width: 1000px;
-    height: 500px%;
+    height: 500px;
     position: absolute;
     z-index: 1000;
 }
