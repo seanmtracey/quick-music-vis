@@ -230,7 +230,8 @@ var __bwMeet13 = (function(){
 		console.log(audio.context);
 		
 		WebGL.camera = new THREE.PerspectiveCamera(75, frame.offsetWidth / frame.offsetHeight, 1, 500);
-		WebGL.camera.position.z = 100;
+		WebGL.camera.position.z = 80;
+		WebGL.camera.position.x = 20;
 		WebGL.scene = new THREE.Scene();
 
 		WebGL.lights.push(new THREE.DirectionalLight(0xffffff, 1));
