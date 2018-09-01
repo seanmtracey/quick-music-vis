@@ -1,0 +1,314 @@
+@charset "UTF-8";
+/* CSS Document */
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html{
+	background-color: #fff;
+	background-position: center 0;
+	background-size: 100%;
+	width: 100%;
+	height: 100%;
+}
+
+body{
+	font-family: 'Roboto', sans-serif;
+	font-size:16px;
+	margin:0;
+	background-repeat: repeat-y;
+	width: 100%;
+	height: 100%;
+}
+
+.hidden{
+	opacity: 0;
+}
+
+main{
+	background-color: rgb(120, 182, 227);
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+main #clouds{
+	width: 100%;
+	position: absolute;
+	height: 200px;
+	/*background-color: rgba(255,0,0,.1);*/
+}
+
+main #clouds span{
+	width: 180px;
+	height: 80px;
+	background-size: 100%;
+	background-position: 50%;
+	/*background-color: rgba(25,0,0,.1);*/
+	position: absolute;
+	background-repeat: no-repeat;
+}
+
+main #clouds span:nth-child(4n+1){
+	left: 10%;
+	top: 20px;
+	background-image: url('assets/images/cloud1.png');
+
+	animation: oppositeAnimation 8s infinite;
+	-moz-animation: oppositeAnimation 8s infinite; /* Firefox */
+	-webkit-animation: oppositeAnimation 8s infinite; /* Safari and Chrome */
+	-o-animation: oppositeAnimation 8s infinite; /* Opera */
+
+}
+
+main #clouds span:nth-child(4n+2){
+	left: 30%;
+	top: 90px;
+	background-image: url('assets/images/cloud2.png');
+
+	animation: slowAnimation 20s infinite;
+	-moz-animation: slowAnimation 20s infinite; /* Firefox */
+	-webkit-animation: slowAnimation 20s infinite; /* Safari and Chrome */
+	-o-animation: slowAnimation 20s infinite; /* Opera */
+
+}
+
+main #clouds span:nth-child(4n+3){
+	left: 60%;
+	top: 40px;
+	background-image: url('assets/images/cloud3.png');
+
+	animation: slowAnimation 8s infinite;
+	-moz-animation: slowAnimation 8s infinite; /* Firefox */
+	-webkit-animation: slowAnimation 8s infinite; /* Safari and Chrome */
+	-o-animation: slowAnimation 8s infinite; /* Opera */
+}
+
+main #clouds span:nth-child(4n+4){
+	left: 80%;
+	top: 100px;
+	background-image: url('assets/images/cloud4.png');
+
+	animation: oppositeAnimation 15s infinite;
+	-moz-animation: oppositeAnimation 15s infinite; /* Firefox */
+	-webkit-animation: oppositeAnimation 15s infinite; /* Safari and Chrome */
+	-o-animation: oppositeAnimation 15s infinite; /* Opera */
+}
+
+main #grades {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;	
+}
+
+main #grades span{
+	width: 100%;
+	height: 17%;
+	float: left;
+}
+
+main #grades span:nth-child(1){
+	background-color: rgba(0,0,0,0) !important;	
+}
+
+main #grades span:nth-child(2){
+	background-color: rgba(0,0,0,.04) !important;	
+}
+
+main #grades span:nth-child(3){
+	background-color: rgba(0,0,0,.08) !important;	
+}
+
+main #grades span:nth-child(4){
+	background-color: rgba(0,0,0,.12) !important;	
+}
+
+main #grades span:nth-child(5){
+	background-color: rgba(0,0,0,.16) !important;	
+}
+
+main #grades span:nth-child(6){
+	background-color: rgba(0,0,0,.2) !important;	
+}
+
+main section#scene {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	overflow: hidden;
+}
+
+main section#scene #theClimb{
+	width: 560px;
+	height: 140px;
+	bottom: 0;
+	left: 50%;
+	margin-left: -280px;
+	/*background-color: blue;*/
+	position: absolute;
+	overflow: hidden;
+
+	-moz-transition:height 2s ease;
+    -webkit-transition:height 2s ease;
+    -o-transition:height 2s ease;
+    transition: height 2s ease;
+}
+
+main section#scene #theClimb #line{
+	width: 5px;
+	left: 50%;
+	height: 100%;
+	margin-left: -2.5px;
+	position: absolute;
+	margin-top: 130px;
+	background-image: url('assets/images/line.png');
+
+}
+
+main section#scene #theClimb #ascent{
+	width: 100%;
+	height: 140px;
+	position: absolute;
+}
+
+main section#scene #theClimb #ascent #stats{
+	width: 100%;
+	height: 100%;
+}
+
+
+
+main section#scene #theClimb #ascent #stats{
+	width: 100%;
+	height: 100%;
+	position: static;
+
+	animation: breezeAnimation 15s infinite;
+	-moz-animation: breezeAnimation 15s infinite; /* Firefox */
+	-webkit-animation: breezeAnimation 15s infinite; /* Safari and Chrome */
+	-o-animation: breezeAnimation 15s infinite; /* Opera */
+}
+
+main section#scene #theClimb #ascent #stats div{
+	width: 200px;
+	height: 100%;
+	top: 20px;
+	text-align: center;
+	float: left;
+}
+
+main section#scene #theClimb #ascent #stats div:nth-child(2){
+	float: right;
+}
+
+main section#scene #theClimb #ascent #stats div h3{
+	font-size: 22px;
+	font-weight: 200;
+	color: white;
+}
+
+main section#scene #theClimb #ascent #stats div p{
+	font-size: 12px;
+	font-weight: 200;
+	color: white;
+}
+
+main section#scene #theClimb #ascent #stats div#altitude{
+	background-image: url('assets/images/altitudeBar.png');
+	background-repeat: no-repeat;
+	background-position: 0px 50px;
+}
+
+main section#scene #theClimb #ascent #stats div#connectionStatus{
+	background-image: url('assets/images/signalBar.png');
+	background-repeat: no-repeat;
+	background-position: 0px 50px;
+}
+
+main section#scene #theClimb #ascent #balloon{
+	position: absolute;
+	left: 50%;
+	width: 80px !important;
+	margin-left: -40px;
+
+	animation: breezeAnimation 15s infinite;
+	-moz-animation: breezeAnimation 15s infinite; /* Firefox */
+	-webkit-animation: breezeAnimation 15s infinite; /* Safari and Chrome */
+	-o-animation: breezeAnimation 15s infinite; /* Opera */
+
+}
+
+main #logo{
+	position: fixed;
+	width: 150px;
+	height: 85px;
+	top:20px;
+	right: 20px;
+}
+
+@media screen and (max-width: 400px){
+
+	*{
+		/*background-color: orange !important;*/
+	}
+
+	main section#scene #theClimb{
+		width:360px;
+		margin-left: -180px;
+	}
+
+	main #logo, #logo img{
+		width: 50px;
+		height: 30px;
+	}
+
+	main section#scene #theClimb #line{
+		left: 65px;
+	}
+
+	main section#scene #theClimb #ascent #balloon{
+		margin-top: 30px;
+		left: 30px;
+		margin-left: 0;
+	}
+
+	main section#scene #theClimb #ascent #stats div{
+		height: 50px;
+		background-position: 0px 21px !important;
+		background-size: 50%;
+		text-align: left;
+	}
+
+	main section#scene #theClimb #ascent #stats div#connectionStatus{
+		float: right;
+		background-image: url("assets/images/altitudeBar.png");
+		margin-top: 20px;
+		margin-right: 50px;
+	}
+
+	main section#scene #theClimb #ascent #stats div#altitude{
+		margin-top: 15px;
+		margin-right: 50px;
+	}
+
+	main section#scene #theClimb #ascent #stats div h3{
+		font-size: 16px;
+		margin: 0;
+	}
+
+	main section#scene #theClimb #ascent #stats div h3, main section#scene #theClimb #ascent #stats div p{
+		text-align: left;
+		padding-left: 15px;
+	}
+
+	main section#scene #theClimb #ascent #balloon, main section#scene #theClimb #ascent #balloon img{
+		width: 50px;
+		height: 70px;
+	}
+
+}
